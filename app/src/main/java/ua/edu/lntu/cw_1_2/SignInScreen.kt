@@ -64,8 +64,12 @@ fun SignInScreen(viewModel: SignInViewModel, navController: NavController) {
                             viewModel.result.value = "Помилка: Поле Password порожнє"
                             return@Button
                         }
-                    }
-                )
+                        viewModel.result.value = "Успішна авторизація"
+                    },
+                    modifier = Modifier.align(Alignment.End)
+                ) {
+                    Text(text = "Sign In")
+                }
             }
         }
     )
