@@ -50,6 +50,22 @@ fun SignInScreen(viewModel: SignInViewModel, navController: NavController) {
                     color = Color.Red,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
+                Button(
+                    onClick = {
+                        val email = viewModel.email.value.text.trim()
+                        val password = viewModel.password.value.text.trim()
+
+                        if (email.isEmpty()) {
+                            viewModel.result.value = "Помилка: Поле Email порожнє"
+                            return@Button
+                        }
+
+                        if (password.isEmpty()) {
+                            viewModel.result.value = "Помилка: Поле Password порожнє"
+                            return@Button
+                        }
+                    }
+                )
             }
         }
     )
