@@ -22,6 +22,15 @@ fun SignInScreen(viewModel: SignInViewModel, navController: NavController) {
                 title = { Text(text = "Sign In") },
                 backgroundColor = Color.Blue
             )
+        },
+        content = {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            )
         }
     )
 }
