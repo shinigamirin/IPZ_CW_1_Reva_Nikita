@@ -44,6 +44,12 @@ fun SignInScreen(viewModel: SignInViewModel, navController: NavController) {
                     visualTransformation = PasswordVisualTransformation(),
                     modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
                 )
+                Text(
+                    text = viewModel.result.value,
+                    style = MaterialTheme.typography.body1,
+                    color = Color.Red,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
             }
         }
     )
