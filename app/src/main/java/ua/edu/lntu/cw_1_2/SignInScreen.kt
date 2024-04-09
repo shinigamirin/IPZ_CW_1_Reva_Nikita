@@ -30,7 +30,21 @@ fun SignInScreen(viewModel: SignInViewModel, navController: NavController) {
                     .padding(16.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
-            )
+            ) {
+                TextField(
+                    value = viewModel.email.value,
+                    onValueChange = { viewModel.email.value = it },
+                    placeholder = { Text("Email") },
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+                )
+                TextField(
+                    value = viewModel.password.value,
+                    onValueChange = { viewModel.password.value = it },
+                    placeholder = { Text("Password") },
+                    visualTransformation = PasswordVisualTransformation(),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+                )
+            }
         }
     )
 }
