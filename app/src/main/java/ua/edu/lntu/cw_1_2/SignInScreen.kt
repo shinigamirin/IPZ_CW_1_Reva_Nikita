@@ -15,4 +15,13 @@ import androidx.navigation.NavController
 
 @Composable
 fun SignInScreen(viewModel: SignInViewModel, navController: NavController) {
-    val context = LocalContext.current}
+    val context = LocalContext.current
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(text = "Sign In") },
+                backgroundColor = Color.Blue
+            )
+        }
+    )
+}
